@@ -1,0 +1,19 @@
+
+@font-face {font-family: "jhchuFamily";
+  src: url('iconfont.eot?t=1526465751859'); /* IE9*/
+  src: url('iconfont.eot?t=1526465751859#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAUoAAsAAAAAB6wAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAAQwAAAFZW7kj+Y21hcAAAAYAAAABcAAABhplgBr5nbHlmAAAB3AAAAU8AAAF4gkEVfGhlYWQAAAMsAAAALwAAADYSyY+zaGhlYQAAA1wAAAAeAAAAJAlEBqBobXR4AAADfAAAAAwAAAAMDwUAAGxvY2EAAAOIAAAACAAAAAgAdgC8bWF4cAAAA5AAAAAfAAAAIAESAF1uYW1lAAADsAAAAVcAAAKRZINEu3Bvc3QAAAUIAAAAHgAAAC9HE3oHeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkZWKcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGBwYKp5xMTf8b2CIYW5gaAAKM4LkANTxC4IAeJzFkMENwCAMAy9AeaAO0kcH6qtzMDFrgJvSRyfAkmPFsZQowAZE8RQT2I3x4JJr7keK+8kzWWoEaiu9q/9UEc2ya1DJLIOtW/3H7vWYnb5CndSJrbwkDGavC7d4nHWPvU7CUBiGz3eO7eGnFDltaSm/hwpHQEj4sSYa6eKicTBxcnRxIGrixOLAYoKJA+EONEavwI1r0FVHxY04eAFUGzcG3zxv8qwPkhD6eScTYiENraIm2kEHCIFcg6KKs8BFp4FrYHDJMHWVCEdw6hQbZBvMoqwnW26nbMpUjoMKOWjzlisaWMB6p4u3oJXMAqTS9iErZRgZQcQSuSt/D9+BkXcy8W7d313z9FZBC/UVxlKM3YRkSQphvBRX4cxMhqVwRPbvpbhtTPIVnAclJez9o1ghzY6HnfNsyQwDDAagpQvqo5ewEwGXdlJjKbocC1l2zFnRof8ZtTQlW56iYDhofZZOyCYKo2pQSdvUIVzjVPPA+QdO2pRv4LfcWIw9//sJbpu9WfTjj+lMmS449U+H13VQKN4fTfwX0vuaP1TdirtwPr94LfwC3rxPHgB4nGNgZGBgAOK0ox6X4/ltvjJwszCAwHUl1esI+v851jRmKyCXg4EJJAoALIQKYAB4nGNgZGBgbvjfwBDDLsMABKxpDIwMqIAZAFG5AvIAAAQAAAAD6QAABxwAAAAAAAAAdgC8eJxjYGRgYGBmCGRgZQABJiDmAkIGhv9gPgMAEPcBcAB4nHWQy0rDQBiFT3oTE3Ch2PW4UVBILxuh4KqQuq7QfZpOmoQkE6bTQje+gQufx6fwBfQp3HuajlCKTZif7z9z/gsD4BJfcLD/rnn27MBjtucGziAsN6nfWW6Rh5bb5CfLHfKzZRcPeLHs4Qqv7OC0zpnd492ygy4+LDdwgU/LTerfllvkH8ttdB3Pcod8Y9nFzHm07OHWeXPHWoZGLsR8K9JIlbEqjZslUbIOwiLNt1O5XOehPlAOcCb1KlWlGPj9A3UiS6n/eq42y6ExsYi1KkTA5jLPlai0ymRk/MSYatTrxVb3I1VwxTE0JEIYxgWfdY4tY4oICiXiOhr6MiTUEqwR0F3QkdM5ZdWSWk5Nn/D8r85YqbFitpsgMICP/gnvhN6y9h/vucKG84dUDXcVPJr9ClJgN5fskJMFqvouoxJR9zllV1VhhB7/+Mjv1y9Q/AKz1HebAHicY2BigAAuBuyAmZGJkZmRhYGxgtGNgQEABdwA3AAA') format('woff'),
+  url('iconfont.ttf?t=1526465751859') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1526465751859#jhchuFamily') format('svg'); /* iOS 4.1- */
+}
+
+.jhchuFamily {
+  font-family:"jhchuFamily" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jhchu-F:before { content: "\e60a"; }
+
