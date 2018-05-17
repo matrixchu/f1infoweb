@@ -1,98 +1,12 @@
 <template>
 <el-container style="height: 100%; border: 1px solid #eee">
         <el-header style="text-align: right; font-size: 12px">
-        <el-row type="flex" class="row-bg" justify="space-between">
-          <el-col :span="4" style="text-align: left; font-size: 24px"><span class="jhchuFamily jhchu-F"></span>F1资源展示</el-col>
-          <el-col :span="16">
-          <el-menu
-            :default-active="activeIndex2"
-            class="el-menu-demo"
-            mode="horizontal"
-            @select="handleSelect"
-            background-color="#F56C6C"
-            text-color="#ffffff"
-            active-text-color="#ffffff">
-            <el-menu-item index="1">处理中心</el-menu-item>
-            <el-submenu index="2">
-              <template slot="title">我的工作台</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
-              <el-menu-item index="2-2">选项2</el-menu-item>
-              <el-menu-item index="2-3">选项3</el-menu-item>
-              <el-submenu index="2-4">
-                <template slot="title">选项4</template>
-                <el-menu-item index="2-4-1">选项1</el-menu-item>
-                <el-menu-item index="2-4-2">选项2</el-menu-item>
-                <el-menu-item index="2-4-3">选项3</el-menu-item>
-              </el-submenu>
-            </el-submenu>
-            <el-menu-item index="3" disabled>消息中心</el-menu-item>
-            <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-          </el-menu>
-          </el-col>
-          <el-col :span="4">
-          <el-dropdown>
-                      <i class="el-icon-setting" style="margin-right: 15px"></i>
-                      <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item>查看</el-dropdown-item>
-                        <el-dropdown-item>新增</el-dropdown-item>
-                        <el-dropdown-item>删除</el-dropdown-item>
-                      </el-dropdown-menu>
-                    </el-dropdown>
-           <span>王小虎</span>
-          </el-col>
-        </el-row>
-
+            <Header></Header>
         </el-header>
 
         <el-container>
-           <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-              <el-menu :default-openeds="['1', '3']">
-                <el-submenu index="1">
-                  <template slot="title"><i class="el-icon-message"></i>导航一</template>
-                  <el-menu-item-group>
-                    <template slot="title">分组一</template>
-                    <el-menu-item index="1-1">选项1</el-menu-item>
-                    <el-menu-item index="1-2">选项2</el-menu-item>
-                  </el-menu-item-group>
-                  <el-menu-item-group title="分组2">
-                    <el-menu-item index="1-3">选项3</el-menu-item>
-                  </el-menu-item-group>
-                  <el-submenu index="1-4">
-                    <template slot="title">选项4</template>
-                    <el-menu-item index="1-4-1">选项4-1</el-menu-item>
-                  </el-submenu>
-                </el-submenu>
-                <el-submenu index="2">
-                  <template slot="title"><i class="el-icon-menu"></i>导航二</template>
-                  <el-menu-item-group>
-                    <template slot="title">分组一</template>
-                    <el-menu-item index="2-1">选项1</el-menu-item>
-                    <el-menu-item index="2-2">选项2</el-menu-item>
-                  </el-menu-item-group>
-                  <el-menu-item-group title="分组2">
-                    <el-menu-item index="2-3">选项3</el-menu-item>
-                  </el-menu-item-group>
-                  <el-submenu index="2-4">
-                    <template slot="title">选项4</template>
-                    <el-menu-item index="2-4-1">选项4-1</el-menu-item>
-                  </el-submenu>
-                </el-submenu>
-                <el-submenu index="3">
-                  <template slot="title"><i class="el-icon-setting"></i>导航三</template>
-                  <el-menu-item-group>
-                    <template slot="title">分组一</template>
-                    <el-menu-item index="3-1">选项1</el-menu-item>
-                    <el-menu-item index="3-2">选项2</el-menu-item>
-                  </el-menu-item-group>
-                  <el-menu-item-group title="分组2">
-                    <el-menu-item index="3-3">选项3</el-menu-item>
-                  </el-menu-item-group>
-                  <el-submenu index="3-4">
-                    <template slot="title">选项4</template>
-                    <el-menu-item index="3-4-1">选项4-1</el-menu-item>
-                  </el-submenu>
-                </el-submenu>
-              </el-menu>
+           <el-aside width="150px" style="background-color: rgb(238, 241, 246)">
+                <Nav></Nav>
             </el-aside>
 
              <el-main>
@@ -110,6 +24,20 @@
 </el-container>
 </template>
 
+<script>
+   import Header from '@/components/header.vue'
+   import Nav from '@/components/nav.vue'
+
+   export default {
+       components: {
+         // ES6简写语法 Nav:Nav
+         Header,
+         Nav
+       },
+       name: 'app'
+     }
+</script>
+
     <style>
       .el-header {
         background-color: #F56C6C;
@@ -121,7 +49,5 @@
         color: #333;
       }
 
-      .jhchu-F {
-          font-size: 24px;
-      }
+
     </style>
