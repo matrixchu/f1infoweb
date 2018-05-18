@@ -1,5 +1,5 @@
 <template>
-    <el-menu v-if="isTeam">
+    <el-menu>
                 <el-menu-item index="1">
                   <span class="jhchuFamily jhchu-caidan_cheduiguanli"></span><template slot="title">当前车队</template>
                 </el-menu-item>
@@ -15,21 +15,13 @@
         export default{
           name:'nav',
 
-          data(){
-              return{
-              isTeam:true
-              }
-          },
+
 
            methods: {
             },
             created() {
               bus.$on('header-message', function(msg) {
-                if(msg===1){
-                    this.isTeam = true;
-                }
-                alert("2:"+this.isTeam);
-                console.log(data);
+                console.log(msg);
               });
             }
         }
