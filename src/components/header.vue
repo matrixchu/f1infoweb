@@ -4,13 +4,14 @@
             <el-col :span="16">
             <el-menu
               :default-active="activeIndex"
+              :router="true"
               class="el-menu-demo"
               mode="horizontal"
               @select="handleSelect"
               background-color="#F56C6C"
               text-color="#ffffff"
               active-text-color="#ffffff">
-              <el-menu-item index="1">F1车队</el-menu-item>
+              <el-menu-item index="/team-cur">F1车队</el-menu-item>
               <el-submenu index="2">
                 <template slot="title">F1车手</template>
                 <el-menu-item index="2-1">选项1</el-menu-item>

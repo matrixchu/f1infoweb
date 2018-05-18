@@ -6,19 +6,12 @@
 
         <el-container>
            <el-aside width="150px" style="background-color: rgb(238, 241, 246)">
-                <Nav></Nav>
+                <router-view name="nav_view"></router-view>
             </el-aside>
 
              <el-main>
-                  <el-table>
-                    <el-table-column prop="date" label="日期" width="140">
-                    </el-table-column>
-                    <el-table-column prop="name" label="姓名" width="120">
-                    </el-table-column>
-                    <el-table-column prop="address" label="地址">
-                    </el-table-column>
-                  </el-table>
-                </el-main>
+                <router-view name="page_view"></router-view>
+             </el-main>
         </el-container>
 
 </el-container>
@@ -26,13 +19,11 @@
 
 <script>
    import Header from '@/components/header.vue'
-   import Nav from '@/components/nav.vue'
 
    export default {
        components: {
          // ES6简写语法 Nav:Nav
-         Header,
-         Nav
+         Header
        },
        name: 'app'
      }
