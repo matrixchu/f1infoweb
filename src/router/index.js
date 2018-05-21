@@ -9,7 +9,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: "/team-cur",
+      path: '/team-cur',
       components: {
         nav_view: nav_team,
         page_view: page_team_cur
