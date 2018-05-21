@@ -7,11 +7,17 @@ import ElementUI from 'element-ui'
 import './theme_red/index.css'
 import './assets/icon/iconfont.css'
 
+// 引入ajax框架axios配置
+import axios from './axios'
+
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 Vue.use(ElementUI)
+
+// 将axios挂载到Vue原型上方便调用
+Vue.prototype.$ajxj = axios
 new Vue({
   el: '#app',
   router,
