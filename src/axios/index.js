@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Qs from 'qs'
 import { Message } from 'element-ui'
 
 // axios 配置
@@ -15,15 +16,18 @@ if (process.env.NODE_ENV === 'development') {
 axios.interceptors.request.use(
   config => {
     config.headers = {
-      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      'Content-Type': 'application/json;charset=UTF-8'
     }
     const data = config.data
     if (!data) {
       return config
     }
-    const key = Object.keys(data)
+    // const key = Object.keys(data)
+    // var _data = Qs.stringify(config.data)
+    // alert(_data)
+    // config.data = _data
     // 重写data，由{"name":"name","password":"password"} 改为 name=name&password=password
-    config.data = encodeURI(key.map(name => `${name}=${data[name]}`).join('&'))
+    // config.data = encodeURI(key.map(name => `${name}=${data[name]}`).join('&'))
     // 设置Content-Type
     return config
   },
