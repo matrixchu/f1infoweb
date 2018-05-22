@@ -1,6 +1,6 @@
 <template>
-  <el-table :data="tableData" style="width: 100%">
-    <el-table-column
+  <el-table :data="tableData" style="width: 100%" class="team-el-table">
+    <el-table-column show-overflow-tooltip=true
       v-for="col in cols"
       :prop="col.prop" :label="col.label">
     </el-table-column>
