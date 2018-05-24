@@ -10,7 +10,6 @@ import './assets/icon/iconfont.css'
 // 引入ajax框架axios配置
 import axios from './axios'
 
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

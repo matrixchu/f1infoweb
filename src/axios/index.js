@@ -1,5 +1,4 @@
 import axios from 'axios'
-import Qs from 'qs'
 import { Message } from 'element-ui'
 
 // axios 配置
@@ -18,9 +17,16 @@ axios.interceptors.request.use(
     config.headers = {
       'Content-Type': 'application/json;charset=UTF-8'
     }
+
     const data = config.data
+
     if (!data) {
       return config
+    }
+    if (config.method === 'get') {
+      const key = Object.keys(data)
+      // 重写data，由{"name":"name","password":"password"} 改为 name=name&password=password
+      config.data = encodeURI(key.map(name => `${name}=${data[name]}`).join('&'))
     }
     // const key = Object.keys(data)
     // var _data = Qs.stringify(config.data)

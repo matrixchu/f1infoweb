@@ -43,23 +43,23 @@
 </template>
 
 <script>
-    import bus from '@/components/bus.js'
+import bus from '@/components/bus.js'
 
-    export default{
-      name:'header',
+export default{
+  name: 'header',
 
-      data() {
-            return {
-              activeIndex: '1'
-            };
-          },
-          methods: {
-            handleSelect(key, keyPath) {
-              bus.$emit('header-message', key);
-              console.log(key, keyPath);
-            }
-          }
+  data () {
+    return {
+      activeIndex: '1'
     }
+  },
+  methods: {
+    handleSelect (key, keyPath) {
+      bus.$emit('header-message', key)
+      console.log(key, keyPath)
+    }
+  }
+}
 </script>
 
 <style>
