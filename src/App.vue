@@ -11,13 +11,7 @@
 
       <el-main>
         <router-view name="page_view"></router-view>
-        <el-dialog
-          title="title"
-          :visible.sync="show"
-          @close="$emit('update:show', false)"
-          :show="show">
-          <span>this is a dialog</span>
-        </el-dialog>
+        <team-dialog></team-dialog>
       </el-main>
     </el-container>
 
@@ -27,6 +21,7 @@
 <script>
 import Header from '@/components/header.vue'
 import bus from '@/components/bus.js'
+import teamDialog from '@/components/team_dialog.vue'
 
 export default {
 
@@ -38,17 +33,11 @@ export default {
   components: {
     // ES6简写语法 Nav:Nav
     Header,
-    bus
+    bus,
+    teamDialog
   },
 
-  name: 'app',
-  created () {
-    var _this = this
-    bus.$on('team-dailog-message', function (msg) {
-      _this.show = msg
-      console.log(msg)
-    })
-  }
+  name: 'app'
 }
 </script>
 

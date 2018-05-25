@@ -4,7 +4,9 @@
       v-for="col in cols"
       :prop="col.prop" :label="col.label">
       <template slot-scope="scope">
-        <div  v-if="col.prop==='team_name'" style="color:red;text-decoration:underline;cursor:pointer;" @click="getMore(scope.row)">{{ scope.row[col.prop] }}</div>
+        <!--<div v-if="col.prop==='team_name'" style="color:#1135ff;text-decoration:underline;cursor:pointer;" @click="getMore(scope.row)">{{ scope.row[col.prop] }}</div>-->
+        <div v-if="col.prop==='team_name'"><el-button type="text" @click="getMore(scope.row)">{{ scope.row[col.prop]}}</el-button> </div>
+        <div v-else-if="col.prop==='team_desc'"><el-button  type="text" round @click="getInfo(scope.row[col.prop])">详细</el-button></div>
         <div  v-else>{{ scope.row[col.prop] }}</div>
       </template>
     </el-table-column>
@@ -49,7 +51,17 @@ export default {
       })
     },
 
+    getInfo (msg) {
+      this.$alert(msg, '车队信息', {
+        confirmButtonText: '确定',
+        callback: action => {
+
+        }
+      })
+    },
+
     getMore (row) {
+      bus.$emit('team-id', row['team_id'])
       bus.$emit('team-dailog-message', true)
     },
 

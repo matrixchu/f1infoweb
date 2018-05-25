@@ -2,13 +2,14 @@
   <el-dialog
     title="title"
     :visible.sync="visible"
-    @close="$emit('update:show', false)"
+    @close="show = false"
     :show="show">
     <span>this is a dialog</span>
   </el-dialog>
 </template>
 
 <script>
+import bus from '@/components/bus.js'
 export default {
   data () {
     return {
@@ -25,6 +26,14 @@ export default {
     show () {
       this.visible = this.show
     }
+  },
+
+  created () {
+    var _this = this
+    bus.$on('team-dailog-message', function (msg) {
+      _this.show = msg
+      console.log(msg)
+    })
   }
 }
 </script>

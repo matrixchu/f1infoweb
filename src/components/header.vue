@@ -50,7 +50,7 @@ export default{
 
   data () {
     return {
-      activeIndex: '1'
+      activeIndex: '/team-cur'
     }
   },
   methods: {
